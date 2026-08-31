@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #6b7280;
+}
+
+/* Summary */
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Panels */
+
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+/* Form */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Transactions */
+
+#transactionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-info strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.transaction-info small {
+  color: #6b7280;
+}
+
+.income {
+  color: #15803d;
+}
+
+.expense {
+  color: #dc2626;
+}
+
+.delete-btn {
+  margin-left: 12px;
+  background: #dc2626;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+#emptyState {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px 0;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    margin: 25px auto;
+  }
+
+  .transaction {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+}
